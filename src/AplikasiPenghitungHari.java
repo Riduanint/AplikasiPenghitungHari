@@ -379,7 +379,10 @@ private void updateTampilan(int tahun, int bulanAngka, int hari) {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AplikasiPenghitungHari().setVisible(true);
+                AplikasiPenghitungHari frame = new AplikasiPenghitungHari(); // 1. Buat objek frame
+                frame.pack();                                 
+                frame.setLocationRelativeTo(null);            
+                frame.setVisible(true);                       
             }
         });
     }
